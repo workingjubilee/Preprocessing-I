@@ -134,3 +134,54 @@ html,
 body {
   height: 100%;
 }
+.partyPen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .partyPen {
+    flex-flow: column nowrap;
+  }
+}
+.PartyBox {
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .PartyBox {
+    max-width: 100%;
+  }
+}
+.kenFlair {
+  border: 5px solid #d08f6d;
+  background-color: #c06a3e;
+  color: #e5e7e7;
+}
+.kenBox {
+  padding: 5px;
+  border: 5px solid #d08f6d;
+  background-color: #c06a3e;
+  color: #e5e7e7;
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .kenBox {
+    max-width: 100%;
+  }
+}
+.bravaBox {
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .bravaBox {
+    max-width: 100%;
+  }
+}
+.oreBox {
+  max-width: 30%;
+}
+@media (max-width: 500px) {
+  .oreBox {
+    max-width: 100%;
+  }
+}

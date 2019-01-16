@@ -58,3 +58,52 @@ html, body {
 		// debug passed:
 		// background-color: red;
 }
+
+// Minimum 1 Color/Font Stack Variable
+
+// Ken's Style: browncoat with a katana
+// pale brown base, steely buckles, flame-red hair
+// Prime = "body" color, Second = "support" color, Tert = "accent" color
+@kenPrimeColor: #d08f6d;
+@kenPrimeShade: #c06a3e;
+@kenSecondColor: #43464B;
+@kenSecondTint: #E5E7E7;
+@kenTertColor: #cf1020;
+
+// Flex Mixins
+
+.partyPen {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	@media (max-width: 500px) {
+		flex-flow: column nowrap;
+	}
+}
+
+.PartyBox {
+	max-width: 30%;
+	@media (max-width: 500px) {
+		max-width: 100%;
+	}
+}
+
+.kenFlair {
+	border: 5px solid @kenPrimeColor;
+	background-color: @kenPrimeShade;
+	color: @kenSecondTint;
+}
+
+.kenBox {
+	padding: 5px;
+	.kenFlair;
+	.PartyBox;
+}
+
+.bravaBox {
+	.PartyBox;
+}
+
+.oreBox {
+	.PartyBox;
+}
