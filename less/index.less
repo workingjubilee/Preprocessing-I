@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -55,5 +55,253 @@ table {
 
 html, body {
     height: 100%;
+		// debug passed:
+		// background-color: red;
 }
 
+html {
+	font-family: 'Eczar', serif;
+	font-size: 62.5%;
+
+	// These media adjustments were used to smooth out a few transitions but are now irrelevant.
+	// @media (max-width: 800px) {
+	// font-size: 68.75%;
+	// }
+	// @media (max-width: 500px) {
+	// font-size: 62.5%;
+	// }
+}
+
+// Minimum 1 Color/Font Stack Variable
+
+// Ken's Style: browncoat with a katana
+// pale brown base, steely buckles, flame-red hair
+// Prime = "body" color, Second = "support" color, Tert = "accent" color
+// use shades/tints of main hues for various purposes
+
+@partyPrimeColor: #c06a3e;
+// #d08f6d;
+@partyPrimeShade: hsl(15,66%,44%);
+@partySecondColor: black;
+
+@kenPrimeColor: #b83d37;
+// I had to make this significantly paler so as to prevent an optical illusion that the boxes it styles becomes wider.
+@kenPrimeShade: rgb(147,34,25);
+// other colors of interest: #440901; #c06a3e;
+@kenSecondColor: #43464B;
+@kenSecondTint: #E5E7E7;
+@kenTertColor: #cf1020;
+
+// Brava Yaga's style: snakey witch.
+@bravaPrimeColor: #1db340;
+@bravaPrimeShade: #178f33;
+@bravaSecondColor: #080008;
+@bravaSecondTint: #080008;
+
+
+// Ore's style: gargoyle made of a lightly gold-laden rock (calaverite?)
+@orePrimeColor: #738493;
+@orePrimeShade: hsl(207,15%,40%);
+// #343637;
+@oreSecondColor: hsl(45,80%,63%);
+@oreSecondTint: @oreSecondColor;
+
+// Scroll-Style Variables & Gradients
+
+@scrollHue: #fffdd0;
+// .scrolledge {
+//
+// }
+body {
+	// ORIGINALLY:
+	// background-color: #026873;
+	// linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+	// linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+	// linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+	// linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+	// background-size: 13px, 29px, 37px, 53px;
+	// teased apart the colors and variables piece by piece, I now understand gradients!
+
+	// this creates a series of tesselating linear vertical gradients that fall on top of each other and tightly overlap, due to having low alpha and being mostly transparent they create patches of high color density and this is used here to give the appearance of wood grain, I tweaked the pattern slightly to make the bands and thus overlaps less tight so it would be more naturalistic. The background color shines through as the baseline.
+	background-color: #7d6755;
+	background-image:
+	linear-gradient(90deg, rgba(0,0,0,.07) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(0,0,0,.13) 45%, transparent 50%),
+	linear-gradient(90deg, transparent 30%, rgba(20,20,20,.17) 60%),
+	linear-gradient(90deg, transparent 50%, rgba(40,40,40,.19) 80%)
+	;
+	// this last bit fixes a few lineup problems by making it a tesselating tile.
+	background-size: 13px, 24px, 37px, 70px;
+
+	// "Why'd you dump it directly onto the body tag?"
+	// "Lack of self-respect, mostly. I can clean it up later!"
+}
+
+div.wrapper {
+	border: 1px solid rgba(135,60,22,1);
+	background-color: @scrollHue;
+}
+
+.wrapper {
+	margin: 15px auto;
+	max-width: 880px;
+	padding: 2%;
+	background-image:
+	linear-gradient(90deg, rgba(135,60,22,0.9), rgba(157,120,3,0.4) 1.5%, rgba(157,120,3,0.2) 3.7%, transparent 9%),
+	linear-gradient(270deg, rgba(135,60,22,0.9), rgba(157,120,3,0.4) 1.5%, rgba(157,120,3,0.2) 3.7%, transparent 9%),
+	linear-gradient(0deg, rgba(135,60,22,0.9), rgba(157,120,3,0.4) 15px, rgba(157,120,3,0.2) 37px, transparent 135px),
+	linear-gradient(180deg, rgba(135,60,22,0.9), rgba(157,120,3,0.4) 15px, rgba(157,120,3,0.2) 37px, transparent 135px),
+	radial-gradient(transparent, rgba(157,120,3,0.2) 95%, rgba(157,120,3,0.4) 96.5%, rgba(135,60,22,0.6) 98%, rgba(135,60,22,0.9) 99%);
+	// Obviously I took notes on other fades but this one was entirely assembled by me.
+	// A series of four linear gradients cover every edge with a "burnt" pattern, and then a radial gradient helps round the corners.
+
+	// .textpadding {
+	// 	padding: 5px;
+	// 	padding-left: 0px;
+	// }
+	// unused class, whoops.
+
+
+	// .partyStyles {
+	// 	// include: partyMainStyles, kenSubStyles, bravaSubStyles, oreSubStyles
+	// }
+	section, header, address {
+		margin: 20px 0;
+		padding: 10px;
+	}
+	nav {
+		padding: 5px;
+		.FlexPen;
+		.navLink {
+			max-width: 25%;
+			margin: 2px 0;
+			padding: 8px;
+			text-decoration: none;
+			font-size: 1.92rem;
+			max-width: 100%;
+
+			// Used to make things look nicer on the tablet transition.
+			@media (max-width: 800px) {
+				width: 33%;
+				text-align: center;
+			}
+
+			// This media query was sometimes tweaked to slightly jump the gun because otherwise the flexboxed links wrap, but I fixed it by toning down the link padding, so it's back to 500.
+			@media (max-width: 500px) {
+				margin: 0;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		// Couldn't find another means to do this that didn't use this double-spec.
+		// Based on the great ideas tablet format.
+		.navLink.partyFlair {
+			@media (max-width: 800px) {
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+	}
+
+	h1 {
+		font-size: 4rem;
+		padding: 5px;
+		padding-left: 0px;
+		margin: 5px 0;
+	}
+	h2 {
+		font-size: 3rem;
+		padding: 5px;
+		padding-left: 0px;
+		margin: 3px 0;
+	}
+	h3 {
+		font-size: 2.4rem;
+		padding: 5px;
+		padding-left: 0px;
+		margin: 1px 0;
+	}
+
+	p {
+		font-size: 1.8rem;
+		padding: 5px;
+		padding-left: 0px;
+	}
+
+	.FlexPen {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		@media (max-width: 500px) {
+			flex-flow: column nowrap;
+		}
+	}
+
+	.partyPen {
+		// I gutted this class' contents to serve as my flex-controller mixer, and left it here in case I need to change it later.
+		.FlexPen;
+	}
+
+
+	.PartyBox {
+		//
+		padding: 10px;
+		max-width: 33%;
+		@media (max-width: 500px) {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		li {
+			font-size: 1.8rem;
+			padding: 5px;
+			padding-left: 0px;
+		}
+	}
+
+	.partyFlair {
+		border: 5px solid @partyPrimeColor;
+		background-color: @partyPrimeShade;
+		color: black;
+	}
+
+	.kenFlair {
+		border: 5px solid @kenPrimeColor;
+		background-color: @kenPrimeShade;
+		color: @kenSecondTint;
+	}
+
+	.kenBox {
+		.kenFlair;
+		.PartyBox;
+	}
+
+	.bravaFlair {
+		border: 5px solid @bravaPrimeColor;
+		background-color: @bravaPrimeShade;
+		color: @bravaSecondColor;
+	}
+
+	.bravaBox {
+		.bravaFlair;
+		.PartyBox;
+	}
+
+	.oreFlair {
+		border: 5px solid @orePrimeColor;
+		background-color: @orePrimeShade;
+		color: @oreSecondColor;
+		li {
+			color: @oreSecondTint;
+		}
+	}
+
+	.oreBox {
+		.oreFlair;
+		.PartyBox;
+	}
+}
+	// testchanges
+
+// Flex Mixins

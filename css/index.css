@@ -1,1 +1,337 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-family: 'Eczar', serif;
+  font-size: 62.5%;
+}
+body {
+  background-color: #7d6755;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.07) 50%, transparent 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.13) 45%, transparent 50%), linear-gradient(90deg, transparent 30%, rgba(20, 20, 20, 0.17) 60%), linear-gradient(90deg, transparent 50%, rgba(40, 40, 40, 0.19) 80%);
+  background-size: 13px, 24px, 37px, 70px;
+}
+div.wrapper {
+  border: 1px solid #873c16;
+  background-color: #fffdd0;
+}
+.wrapper {
+  margin: 15px auto;
+  max-width: 880px;
+  padding: 2%;
+  background-image: linear-gradient(90deg, rgba(135, 60, 22, 0.9), rgba(157, 120, 3, 0.4) 1.5%, rgba(157, 120, 3, 0.2) 3.7%, transparent 9%), linear-gradient(270deg, rgba(135, 60, 22, 0.9), rgba(157, 120, 3, 0.4) 1.5%, rgba(157, 120, 3, 0.2) 3.7%, transparent 9%), linear-gradient(0deg, rgba(135, 60, 22, 0.9), rgba(157, 120, 3, 0.4) 15px, rgba(157, 120, 3, 0.2) 37px, transparent 135px), linear-gradient(180deg, rgba(135, 60, 22, 0.9), rgba(157, 120, 3, 0.4) 15px, rgba(157, 120, 3, 0.2) 37px, transparent 135px), radial-gradient(transparent, rgba(157, 120, 3, 0.2) 95%, rgba(157, 120, 3, 0.4) 96.5%, rgba(135, 60, 22, 0.6) 98%, rgba(135, 60, 22, 0.9) 99%);
+}
+.wrapper section,
+.wrapper header,
+.wrapper address {
+  margin: 20px 0;
+  padding: 10px;
+}
+.wrapper nav {
+  padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .wrapper nav {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper nav .navLink {
+  max-width: 25%;
+  margin: 2px 0;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1.92rem;
+  max-width: 100%;
+}
+@media (max-width: 800px) {
+  .wrapper nav .navLink {
+    width: 33%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper nav .navLink {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper nav .navLink.partyFlair {
+    text-align: center;
+    width: 100%;
+  }
+}
+.wrapper h1 {
+  font-size: 4rem;
+  padding: 5px;
+  padding-left: 0px;
+  margin: 5px 0;
+}
+.wrapper h2 {
+  font-size: 3rem;
+  padding: 5px;
+  padding-left: 0px;
+  margin: 3px 0;
+}
+.wrapper h3 {
+  font-size: 2.4rem;
+  padding: 5px;
+  padding-left: 0px;
+  margin: 1px 0;
+}
+.wrapper p {
+  font-size: 1.8rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .FlexPen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .wrapper .FlexPen {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper .partyPen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .wrapper .partyPen {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper .PartyBox {
+  padding: 10px;
+  max-width: 33%;
+}
+@media (max-width: 500px) {
+  .wrapper .PartyBox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.wrapper .PartyBox li {
+  font-size: 1.8rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .partyFlair {
+  border: 5px solid #c06a3e;
+  background-color: #ba4b26;
+  color: black;
+}
+.wrapper .kenFlair {
+  border: 5px solid #b83d37;
+  background-color: #932219;
+  color: #e5e7e7;
+}
+.wrapper .kenBox {
+  border: 5px solid #b83d37;
+  background-color: #932219;
+  color: #e5e7e7;
+  padding: 10px;
+  max-width: 33%;
+}
+@media (max-width: 500px) {
+  .wrapper .kenBox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.wrapper .kenBox li {
+  font-size: 1.8rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .bravaFlair {
+  border: 5px solid #1db340;
+  background-color: #178f33;
+  color: #080008;
+}
+.wrapper .bravaBox {
+  border: 5px solid #1db340;
+  background-color: #178f33;
+  color: #080008;
+  padding: 10px;
+  max-width: 33%;
+}
+@media (max-width: 500px) {
+  .wrapper .bravaBox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.wrapper .bravaBox li {
+  font-size: 1.8rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .oreFlair {
+  border: 5px solid #738493;
+  background-color: #576875;
+  color: #ecc655;
+}
+.wrapper .oreFlair li {
+  color: #ecc655;
+}
+.wrapper .oreBox {
+  border: 5px solid #738493;
+  background-color: #576875;
+  color: #ecc655;
+  padding: 10px;
+  max-width: 33%;
+}
+.wrapper .oreBox li {
+  color: #ecc655;
+}
+@media (max-width: 500px) {
+  .wrapper .oreBox {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.wrapper .oreBox li {
+  font-size: 1.8rem;
+  padding: 5px;
+  padding-left: 0px;
+}
