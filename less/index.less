@@ -171,12 +171,20 @@ div.wrapper {
 		padding: 5px;
 		.FlexPen;
 		.navLink {
-			padding: 12px;
+			margin: 2px 0;
+			padding: 9px;
 			text-decoration: none;
-			font-size: 2.0rem;
+			font-size: 1.95rem;
 
-			// This media query was sometimes tweaked to slightly jump the gun because otherwise the flexboxed links wrap, but I fixed it by toning down the link padding.
+			// Used to make things look nicer on the tablet transition.
+			@media (max-width: 800px) {
+				max-width: 33.3%;
+				text-align: center;
+			}
+
+			// This media query was sometimes tweaked to slightly jump the gun because otherwise the flexboxed links wrap, but I fixed it by toning down the link padding, so it's back to 500.
 			@media (max-width: 500px) {
+				margin: 0;
 				width: 100%;
 				max-width: 100%;
 				text-align: center;
