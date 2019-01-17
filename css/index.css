@@ -175,10 +175,11 @@ div.wrapper {
   padding: 9px;
   text-decoration: none;
   font-size: 1.95rem;
+  max-width: 100%;
 }
 @media (max-width: 800px) {
   .wrapper nav .navLink {
-    max-width: 33.3%;
+    width: 33.3%;
     text-align: center;
   }
 }
@@ -186,7 +187,6 @@ div.wrapper {
   .wrapper nav .navLink {
     margin: 0;
     width: 100%;
-    max-width: 100%;
     text-align: center;
   }
 }
@@ -194,7 +194,6 @@ div.wrapper {
   .wrapper nav .navLink.partyFlair {
     text-align: center;
     width: 100%;
-    max-width: 100%;
   }
 }
 .wrapper h1 {

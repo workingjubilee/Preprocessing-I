@@ -63,7 +63,7 @@ html {
 	font-family: 'Eczar', serif;
 	font-size: 62.5%;
 
-	// These media adjustments were used to smooth out a few transitions.
+	// These media adjustments were used to smooth out a few transitions but are now irrelevant.
 	// @media (max-width: 800px) {
 	// font-size: 68.75%;
 	// }
@@ -175,10 +175,11 @@ div.wrapper {
 			padding: 9px;
 			text-decoration: none;
 			font-size: 1.95rem;
+			max-width: 100%;
 
 			// Used to make things look nicer on the tablet transition.
 			@media (max-width: 800px) {
-				max-width: 33.3%;
+				width: 33.3%;
 				text-align: center;
 			}
 
@@ -186,7 +187,6 @@ div.wrapper {
 			@media (max-width: 500px) {
 				margin: 0;
 				width: 100%;
-				max-width: 100%;
 				text-align: center;
 			}
 		}
@@ -196,7 +196,6 @@ div.wrapper {
 			@media (max-width: 800px) {
 				text-align: center;
 				width: 100%;
-				max-width: 100%;
 			}
 		}
 
