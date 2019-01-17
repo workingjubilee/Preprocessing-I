@@ -186,7 +186,7 @@ div.wrapper {
 				text-align: center;
 			}
 
-			// This media query was sometimes tweaked to slightly jump the gun because otherwise the flexboxed links wrap, but I fixed it by toning down the link padding, so it's back to 500.
+			// This media query was sometimes tweaked to slightly jump the gun because otherwise the flexboxed links wrap, but I fixed it by toning down the link padding and font size, so it's back to 500.
 			@media (max-width: 500px) {
 				margin: 0;
 				width: 100%;
@@ -229,7 +229,8 @@ div.wrapper {
 		padding-left: 0px;
 	}
 
-	.FlexPen {
+	.FlexPen() {
+		// basic mixin for a flex controller.
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -244,8 +245,8 @@ div.wrapper {
 	}
 
 
-	.PartyBox {
-		//
+	.PartyBox() {
+		// basic mixin for the second line of flex items.
 		padding: 10px;
 		max-width: 33%;
 		@media (max-width: 500px) {
@@ -292,9 +293,10 @@ div.wrapper {
 		border: 5px solid @orePrimeColor;
 		background-color: @orePrimeShade;
 		color: @oreSecondColor;
-		li {
-			color: @oreSecondTint;
-		}
+		// li {
+		// 	color: @oreSecondTint;
+		// 	// deprecated, initially used two different colors.
+		// }
 	}
 
 	.oreBox {

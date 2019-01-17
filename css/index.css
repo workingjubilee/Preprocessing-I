@@ -220,16 +220,6 @@ div.wrapper {
   padding: 5px;
   padding-left: 0px;
 }
-.wrapper .FlexPen {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-@media (max-width: 500px) {
-  .wrapper .FlexPen {
-    flex-flow: column nowrap;
-  }
-}
 .wrapper .partyPen {
   display: flex;
   flex-flow: row wrap;
@@ -239,21 +229,6 @@ div.wrapper {
   .wrapper .partyPen {
     flex-flow: column nowrap;
   }
-}
-.wrapper .PartyBox {
-  padding: 10px;
-  max-width: 33%;
-}
-@media (max-width: 500px) {
-  .wrapper .PartyBox {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-.wrapper .PartyBox li {
-  font-size: 1.8rem;
-  padding: 5px;
-  padding-left: 0px;
 }
 .wrapper .partyFlair {
   border: 5px solid #c06a3e;
@@ -311,18 +286,12 @@ div.wrapper {
   background-color: #576875;
   color: #ecc655;
 }
-.wrapper .oreFlair li {
-  color: #ecc655;
-}
 .wrapper .oreBox {
   border: 5px solid #738493;
   background-color: #576875;
   color: #ecc655;
   padding: 10px;
   max-width: 33%;
-}
-.wrapper .oreBox li {
-  color: #ecc655;
 }
 @media (max-width: 500px) {
   .wrapper .oreBox {
