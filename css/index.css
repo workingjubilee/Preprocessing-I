@@ -130,58 +130,185 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 75%;
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 62.5%;
+  }
+}
 html,
 body {
   height: 100%;
 }
-.partyPen {
+div.wrapper {
+  border: 1px dashed black;
+  background-color: #fffdd0;
+}
+.wrapper {
+  max-width: 100%;
+  padding: 5%;
+}
+.wrapper .textpadding {
+  padding: 5px;
+  padding-left: 0px;
+}
+@media (max-width: 500px) {
+  .wrapper {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper nav {
+  padding: 5px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 @media (max-width: 500px) {
-  .partyPen {
+  .wrapper nav {
     flex-flow: column nowrap;
   }
 }
-.PartyBox {
-  max-width: 30%;
-}
-@media (max-width: 500px) {
-  .PartyBox {
-    max-width: 100%;
-  }
-}
-.kenFlair {
-  border: 5px solid #d08f6d;
-  background-color: #c06a3e;
-  color: #e5e7e7;
-}
-.kenBox {
+.wrapper nav .navLink {
   padding: 5px;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.wrapper h1 {
+  font-size: 4rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper h2 {
+  font-size: 3rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper h3 {
+  font-size: 2rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper p {
+  font-size: 1.6rem;
+}
+.wrapper .FlexPen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .wrapper .FlexPen {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper .partyPen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .wrapper .partyPen {
+    flex-flow: column nowrap;
+  }
+}
+.wrapper .PartyBox {
+  padding: 10px;
+  max-width: 33%;
+}
+@media (max-width: 500px) {
+  .wrapper .PartyBox {
+    width: 99%;
+    max-width: 99%;
+  }
+}
+.wrapper .PartyBox li {
+  font-size: 1.6rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .partyFlair {
+  border: 5px solid orange;
+  background-color: darkorange;
+}
+.wrapper .kenFlair {
   border: 5px solid #d08f6d;
   background-color: #c06a3e;
   color: #e5e7e7;
-  max-width: 30%;
+}
+.wrapper .kenBox {
+  border: 5px solid #d08f6d;
+  background-color: #c06a3e;
+  color: #e5e7e7;
+  padding: 10px;
+  max-width: 33%;
 }
 @media (max-width: 500px) {
-  .kenBox {
-    max-width: 100%;
+  .wrapper .kenBox {
+    width: 99%;
+    max-width: 99%;
   }
 }
-.bravaBox {
-  max-width: 30%;
+.wrapper .kenBox li {
+  font-size: 1.6rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .bravaFlair {
+  border: 5px solid #31284a;
+  background-color: #191526;
+  color: #27db51;
+}
+.wrapper .bravaBox {
+  border: 5px solid #31284a;
+  background-color: #191526;
+  color: #27db51;
+  padding: 10px;
+  max-width: 33%;
 }
 @media (max-width: 500px) {
-  .bravaBox {
-    max-width: 100%;
+  .wrapper .bravaBox {
+    width: 99%;
+    max-width: 99%;
   }
 }
-.oreBox {
-  max-width: 30%;
+.wrapper .bravaBox li {
+  font-size: 1.6rem;
+  padding: 5px;
+  padding-left: 0px;
+}
+.wrapper .oreFlair {
+  border: 5px solid #4e5559;
+  background-color: #343637;
+  color: #ffd700;
+}
+.wrapper .oreFlair li {
+  color: #ffd74f;
+}
+.wrapper .oreBox {
+  border: 5px solid #4e5559;
+  background-color: #343637;
+  color: #ffd700;
+  padding: 10px;
+  max-width: 33%;
+}
+.wrapper .oreBox li {
+  color: #ffd74f;
 }
 @media (max-width: 500px) {
-  .oreBox {
-    max-width: 100%;
+  .wrapper .oreBox {
+    width: 99%;
+    max-width: 99%;
   }
+}
+.wrapper .oreBox li {
+  font-size: 1.6rem;
+  padding: 5px;
+  padding-left: 0px;
 }
